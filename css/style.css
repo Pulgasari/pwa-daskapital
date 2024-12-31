@@ -4,9 +4,7 @@ html {
 }
 body {
   font-family: sans-serif;
-}
 
-body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -18,26 +16,22 @@ body {
   color: #000;
 }
 
-main {
-  margin-bottom: 200px;
-}
-
 a {
   color: #FFF;
   text-decoration: none;
 }
 
-#welcome img {
+img {
   width: 300px;
 }
-#welcome main {
+main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 200px;
 }
-#welcome main > * {
+main > * {
   margin: auto;
-  
 }
 
 #welcome .links a {
