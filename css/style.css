@@ -38,14 +38,12 @@ main > * {
   display: block;
 }
 
-.titel {
-  
-}
+.titel { color: white; text-shadow: 0 0 10px black; }
 .titel > div:nth-child(1){ font-size: 2.0em; font-weight: bold; }
-.titel > div:nth-child(2){ font-size: 4.0em; font-weight: bold; text-transform: uppercase; }
-.titel > div:nth-child(3){ font-size: 1.0em; font-weight: bold; text-transform: uppercase; }
+.titel > div:nth-child(2){ font-size: 4.0em; font-weight: 900; text-transform: uppercase; }
+.titel > div:nth-child(3){ font-size: 1.3em; font-weight: bold; text-transform: uppercase; }
 .titel > div:nth-child(4){ font-size: 1.5em; font-weight: bold; font-style: italic; }
 .titel > div:nth-child(5){ font-size: 1.0em; }
 .titel > div:nth-child(6){ font-size: 1.0em; text-transform: uppercase; }
 
-.links { text-align: left; }
+.links { text-align: left; text-shadow: 0 0 5px black; }
