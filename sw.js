@@ -1,9 +1,10 @@
 var cacheName = 'pwa-daskapital';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/main.js'
+  //'/',
+  //'/index.html',
+  //'/css/style.css',
+  //'/js/main.js',
+  '/images/marx1.png'
 ];
 
 /* Start the service worker and cache all of the app's content */
