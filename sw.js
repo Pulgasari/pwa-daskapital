@@ -4,7 +4,7 @@ var filesToCache = [
   //'/index.html',
   //'/css/style.css',
   //'/js/main.js',
-  '/images/bg1.jpg'
+  'images/bg1.jpg'
 ];
 
 /* Start the service worker and cache all of the app's content */
