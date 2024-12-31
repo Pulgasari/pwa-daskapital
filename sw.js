@@ -1,4 +1,4 @@
-var cacheName = 'hello-pwa';
+var cacheName = 'pwa-daskapital';
 var filesToCache = [
   '/',
   '/index.html',
