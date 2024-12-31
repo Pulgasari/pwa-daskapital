@@ -30,4 +30,6 @@ a {
   
 }
 
-
+#welcome .links a {
+  display: block;
+}
