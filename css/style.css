@@ -2,7 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-/* Make content area fill the entire browser window */
 html,
 body#welcome {
   display: flex;
@@ -39,7 +38,9 @@ a {
   display: block;
 }
 
-
+.titel {
+  
+}
 .titel > div:nth-child(1){ font-size: 2em; font-weight: bold; }
 .titel > div:nth-child(2){ font-size: 3em; font-weight: bold; text-transform: uppercase; }
 .titel > div:nth-child(3){ font-size: 2em; font-weight: bold; font-style: italic; }
