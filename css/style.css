@@ -25,6 +25,11 @@ a {
 #welcome img {
   width: 300px;
 }
+#welcome main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 #welcome main > * {
   margin: auto;
   
