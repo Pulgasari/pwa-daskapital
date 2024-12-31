@@ -6,10 +6,9 @@ body {
   font-family: sans-serif;
 }
 
-html,
-body#welcome {
+body {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
   height: 100vh; width: 100vw;
@@ -18,6 +17,10 @@ body#welcome {
   
   background: #E40000;
   color: #000;
+}
+
+main {
+  margin-bottom: 200px;
 }
 
 a {
