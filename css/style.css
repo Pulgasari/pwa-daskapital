@@ -1,3 +1,7 @@
+html {
+  background: no-repeat url('../images/bg2.jpg') center center;
+  background-size: cover;
+}
 body {
   font-family: sans-serif;
 }
@@ -46,3 +50,5 @@ a {
 .titel > div:nth-child(3){ font-size: 2em; font-weight: bold; font-style: italic; }
 .titel > div:nth-child(4){ font-size: 1em; }
 .titel > div:nth-child(5){ font-size: 1em; text-transform: uppercase; }
+
+.links { text-align: left; }
