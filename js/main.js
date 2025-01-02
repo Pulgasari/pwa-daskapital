@@ -1,3 +1,7 @@
+let brightness = cookie('brightness') || '1.00';
+let fontsize   = cookie('fontsize')   || '15';
+let lineheight = cookie('lineheight') || '1.25';
+
 window.onload = () => {
   'use strict';
 
@@ -10,11 +14,16 @@ window.onload = () => {
   //  if( cookie(str) ){  x('html').cssvar( str, cookie(str) ) }
   //});
   
-  if( cookie('brightness') ){ x('html').cssvar( 'brightness', cookie('brightness')        ) }
-  if( cookie('fontsize'  ) ){ x('html').cssvar(   'fontsize', cookie('fontsize'  ) + 'px' ) }
-  if( cookie('lineheight') ){ x('html').cssvar( 'lineheight', cookie('lineheight') + 'em' ) }
+  //if( cookie('brightness') ){ x('html').cssvar( 'brightness', cookie('brightness')        ) }
+  //if( cookie('fontsize'  ) ){ x('html').cssvar(   'fontsize', cookie('fontsize'  ) + 'px' ) }
+  //if( cookie('lineheight') ){ x('html').cssvar( 'lineheight', cookie('lineheight') + 'em' ) }
   
   renderHeader();
+  
+  // Apply CSS Variables
+  x('html').cssvar( 'brightness', brightness        );
+  x('html').cssvar(   'fontsize', fontsize   + 'px' );
+  x('html').cssvar( 'lineheight', lineheight + 'em' );
   
 }
 
@@ -83,11 +92,11 @@ const x = selector => {
 };
 
 
-function renderHeader(){
+let renderHeader = () => {
   
-  let brightness = cookie('brightness') || '1.00';
-  let fontsize   = cookie('fontsize')   || '15';
-  let lineheight = cookie('lineheight') || '1.25';
+  //let brightness = cookie('brightness') || '1.00';
+  //let fontsize   = cookie('fontsize')   || '15';
+  //let lineheight = cookie('lineheight') || '1.25';
   
   let html = `
     <div class="left">
@@ -104,7 +113,7 @@ function renderHeader(){
               type="range" id="fontsize" name="fontsize" 
               min="10" max="20" step="1" value="${fontsize}" 
               oninput="cookie('fontsize',this.value); x('html').cssvar('fontsize',this.value+'px')"
-            >
+              >
           </div>
           <div>
             <label for="lineheight">Zeilenabstand</label>
@@ -112,7 +121,7 @@ function renderHeader(){
               type="range" id="lineheight" name="lineheight" 
               min="1" max="2" step="0.05" value="${lineheight}" 
               oninput="cookie('lineheight',this.value); x('html').cssvar('lineheight',this.value+'em')"
-            >
+              >
           </div>
         </div>
       </div>
@@ -130,7 +139,11 @@ function renderHeader(){
           </div>
           <div>
             <label for="brightness">Helligkeit</label>
-            <input type="range" id="brightness" name="brightness" min="0.25" max="1.00" step="0.05" value="${brightness}" oninput="cookie('brightness',this.value); x('html').cssvar('brightness',this.value)">
+            <input 
+              type="range" id="brightness" name="brightness"
+              min="0.25" max="1.00" step="0.05" value="${brightness}" 
+              oninput="cookie('brightness',this.value); x('html').cssvar('brightness',this.value)"
+              >
           </div>
         </div>
       </div>
