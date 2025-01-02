@@ -31,8 +31,8 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-.wb    { color: var(--wb-color);    font-style: "Roboto Slab"; }
-.wbmrx { color: var(--wbmrx-color); font-style: "Roboto Slab"; }
+.wb    { color: var(--wb-color);    font-family: "Roboto Slab"; }
+.wbmrx { color: var(--wbmrx-color); font-family: "Roboto Slab"; }
 
 blockquote, p { hyphens: auto; text-align: justify; }
 cite { display: block; font-size: 0.75em; opacity: 0.5; }
