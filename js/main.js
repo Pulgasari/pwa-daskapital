@@ -84,6 +84,16 @@ const x = selector => {
       return this.el.dataset[property];
     }
   };
+  
+    // Value
+  obj.value = function( value ) { 
+    if( typeof value !== 'undefined' ){
+      this.el.value = value;
+      return this;
+    } else {
+      return this.el.value;
+    }
+  };
 
   // Log
   obj.log = function() { console.log(this.el); return this; };
