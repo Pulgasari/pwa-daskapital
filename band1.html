@@ -36,7 +36,7 @@
         <div class="subtab hidden" id="colorsettings">
            <div>
             <label for="stylemode">Theme</label>
-            <select id="stylemode" name="stylemode" onchange="document.documentElement.dataset.stylemode = this.value">
+            <select id="stylemode" name="stylemode" onchange="x('html').data('stylemode',this.value)">
               <option>dark</option>
               <option>light</option>
               <option>oled</option>
