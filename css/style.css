@@ -102,7 +102,7 @@ header a:hover {
 #toc li.H5 { list-style-type: '˪'; padding-left: 15px; border-top: 1px dashed white; }
 #toc li.H6 { list-style-type: '˪'; padding-left: 20px; border-top: 1px dashed white; }
 
-#toc li.H1 a { color: black; } 
+#toc li.H2 a { color: black; } 
 
 header .right {
   display: flex;
