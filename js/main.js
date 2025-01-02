@@ -20,11 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const listItem = document.createElement('li');
       const link = document.createElement('a');
       const id = headline.innerText.replace(/\s+/g, '-').toLowerCase();
+      const tagName = headline.tagName;
       
       headline.id = id;
       link.href = `#${id}`;
       link.innerText = headline.innerText;
 
+      listItem.classList.add(tagName);
       listItem.appendChild(link);
       toc.appendChild(listItem);
     });
