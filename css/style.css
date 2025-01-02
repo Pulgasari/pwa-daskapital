@@ -35,11 +35,7 @@ body {
 .wbmrx { color: var(--wbmrx-color); font-style: "Roboto Slab"; }
 
 blockquote, p { hyphens: auto; text-align: justify; }
-cite {
-  display: block;
-  font-size: 0.75em;
-  opacity: 0.5;
-}
+cite { display: block; font-size: 0.75em; opacity: 0.5; }
 
 h1, h2, h3, h4, h5, h6,
 blockquote, p {
