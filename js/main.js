@@ -4,6 +4,13 @@ window.onload = () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js');
   }
+  
+  if( cookie('brightness') ){
+    //x('#brightness').el.value = cookie('brightness');
+    //x('#brightness').value( cookie('brightness') );
+  }
+  
+  
 }
 
 
