@@ -101,7 +101,7 @@ function renderHeader(){
             <input 
               type="range" id="fontsize" name="fontsize" 
               min="10" max="20" step="1" value="${fontsize}" 
-              oninput="cookie('fontsize',this.value); x('html').cssvar('fontsize',this.value)"
+              oninput="cookie('fontsize',this.value); x('html').cssvar('fontsize',this.value+'px')"
             >
           </div>
           <div>
@@ -109,7 +109,7 @@ function renderHeader(){
             <input 
               type="range" id="lineheight" name="lineheight" 
               min="1" max="2" step="0.05" value="${lineheight}" 
-              oninput="cookie('lineheight',this.value); x('html').cssvar('lineheight',this.value)"
+              oninput="cookie('lineheight',this.value); x('html').cssvar('lineheight',this.value+'em')"
             >
           </div>
         </div>
