@@ -2,7 +2,7 @@
 
   this.toc = ( obj ) => {
 
-    let container = obj.container || document.getElementById('toc');
+    let container = document.querySelector(obj.container);
     let selectors = obj.selectors || 'h1, h2, h3, h4, h5, h6';
 
     const menu = container;
