@@ -11,19 +11,19 @@ body {
   line-height: 1.25em;
 }
 
-html[stylemode="dark"]{
+html[data-stylemode="dark"]{
   
 }
-html[stylemode="light"]{
+html[data-stylemode="light"]{
   --background-color: #FCF4E1;
   --text-color: #191512;
   --wb-color: #AAA;
   --wbmrx-color: #AAA;
 }
-html[stylemode="oled"]{
+html[data-stylemode="oled"]{
   
 }
-html[stylemode="white"]{
+html[data-stylemode="white"]{
   
 }
 
