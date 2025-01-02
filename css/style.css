@@ -40,6 +40,7 @@ blockquote, p {
   text-align: justify;
 }
 cite {
+  display: block;
   font-size: 0.75em;
   opacity: 0.5;
 }
