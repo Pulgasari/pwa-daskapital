@@ -70,7 +70,10 @@ header {
 }
 
 #toc {
+  background: #000;
+  overflow-y: auto;
   position: absolute;
+  width: 100%;
 }
 
 
