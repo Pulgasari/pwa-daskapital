@@ -49,10 +49,10 @@ const x = selector => {
   obj.toggleClass = function(name) { this.el.classList.toggle(name); return this; };
 
   // Data
-  obj.data = ( property, value ) => { 
+  obj.data = function( property, value ) { 
     this.el.dataset[property] = value;
     return this;
-  }
+  };
 
   // Log
   obj.log = function() { console.log(this.el); return this; };
