@@ -10,17 +10,6 @@ window.onload = () => {
     navigator.serviceWorker.register('./sw.js');
   }
   
-  //[ 'brightness', 'fontsize', 'lineheight' ]
-  //.forEach( str => {
-  //  if( cookie(str) ){  x('html').cssvar( str, cookie(str) ) }
-  //});
-  
-  //if( cookie('brightness') ){ x('html').cssvar( 'brightness', cookie('brightness')        ) }
-  //if( cookie('fontsize'  ) ){ x('html').cssvar(   'fontsize', cookie('fontsize'  ) + 'px' ) }
-  //if( cookie('lineheight') ){ x('html').cssvar( 'lineheight', cookie('lineheight') + 'em' ) }
-  
-
-  
   // Apply CSS Variables
   x('html').cssvar( 'brightness', brightness        );
   x('html').cssvar(   'fontsize', fontsize   + 'px' );
@@ -28,17 +17,12 @@ window.onload = () => {
   
   //
   renderHeader();
-  buildTableOfContents();
-  //toc({ container: '#toc', selectors: 'h2, h3, h4, h5, h6' });
+  toc({ container: '#toc', selectors: 'h2, h3, h4, h5, h6' });
   
 }
 
 
 let renderHeader = () => {
-  
-  //let brightness = cookie('brightness') || '1.00';
-  //let fontsize   = cookie('fontsize')   || '15';
-  //let lineheight = cookie('lineheight') || '1.25';
   
   let html = `
     <div class="left">
