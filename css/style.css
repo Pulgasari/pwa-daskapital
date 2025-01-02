@@ -71,7 +71,13 @@ header {
   padding: 10px;
   position: sticky; top: 0;
 }
-
+header a {
+  color: white;
+  text-decoration: none;
+}
+header a:hover {
+  text-decoration: underline;
+}
 #toc {
   background: #000;
   overflow-y: auto;
