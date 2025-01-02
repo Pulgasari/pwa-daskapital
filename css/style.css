@@ -7,13 +7,15 @@
 }
 html {
   --brightness: 1.00;
+  --fontsize: 15px;
+  --lineheight: 1.25em;
 }
 body {
   font-size: 1em;
   line-height: 1.25em;
 }
 main > * {
-  opacity: var(--brightness);
+  
 }
 html[data-stylemode="dark"]{
   
@@ -53,6 +55,9 @@ cite {
 }
 
 main {
+  opacity: var(--brightness);
+  font-size: var(--fontsize);
+  line-height: var(--lineheight);
   padding: 10px;
 }
 

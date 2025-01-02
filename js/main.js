@@ -5,10 +5,14 @@ window.onload = () => {
     navigator.serviceWorker.register('./sw.js');
   }
   
-  [ 'brightness', 'fontsize', 'lineheight' ]
-  .forEach( str => {
-    if( cookie(str) ){  x('html').cssvar( str, cookie(str) ) }
-  });
+  //[ 'brightness', 'fontsize', 'lineheight' ]
+  //.forEach( str => {
+  //  if( cookie(str) ){  x('html').cssvar( str, cookie(str) ) }
+  //});
+  
+  if( cookie('brightness') ){ x('html').cssvar( 'brightness', cookie('brightness')        ) }
+  if( cookie('fontsize'  ) ){ x('html').cssvar(   'fontsize', cookie('fontsize'  ) + 'px' ) }
+  if( cookie('lineheight') ){ x('html').cssvar( 'lineheight', cookie('lineheight') + 'em' ) }
   
   renderHeader();
   
