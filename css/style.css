@@ -12,7 +12,10 @@ html[stylemode="dark"]{
   
 }
 html[stylemode="light"]{
-  --background-color:
+  --background-color: #FCF4E1;
+  --text-color: #191512;
+  --wb-color: #FFD67C;
+  --wbmrx-color: #FFD67C;
 }
 html[stylemode="oled"]{
   
@@ -23,4 +26,20 @@ html[stylemode="white"]{
 
 body {
   background-color: var(--background-color);
+  color: var(--text-color);
+}
+.wb {
+  color: var(--wb-color);
+}
+.wbmrx {
+  color: var(--wbmrx-color);
+}
+
+blockquote, p {
+  hyphens: auto;
+  text-align: justify;
+}
+cite {
+  font-size: 0.75em;
+  opacity: 0.5;
 }
