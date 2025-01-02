@@ -66,6 +66,9 @@ h6 { font-size: 1.00em; line-height: 1.25em; }
 
 header {
   background: #000;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
   position: sticky; top: 0;
 }
 
