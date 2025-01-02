@@ -88,6 +88,16 @@ header a:hover {
 #toc li.H5 { padding-left: 15px; }
 #toc li.H6 { padding-left: 20px; }
 
+header .right {
+  display: flex;
+}
+header .right > div {
+  
+}
+header .right > div .subtab {
+  background: black;
+}
+
 .hidden {
   display: none!important;
 }

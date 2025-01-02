@@ -22,9 +22,29 @@
 </head>
 <body class="" id="band1">
   <header>
-    <div>
+    <div class="left">
       <i class="fa-solid fa-bars" onclick="document.getElementById('toc').classList.toggle('hidden')"></i>
       <menu id="toc" class="hidden"></menu>
+    </div>
+    <div class="right">
+      <div>
+        <i class="fa-solid fa-font" onclick="document.getElementById('fontsettings').classList.toggle('hidden')"></i>
+        <div class="subtab hidden" id="fontsettings"></div>
+      </div>
+       <div>
+        <i class="fa-solid fa-palette" onclick="document.getElementById('colorsettings').classList.toggle('hidden')"></i>
+        <div class="subtab hidden" id="colorsettings">
+           <div>
+            <label for="stylemode">Theme</label>
+            <select id="stylemode" name="stylemode" onchange="document.documentElement.dataset.stylemode = this.value">
+              <option>dark</option>
+              <option>light</option>
+              <option>oled</option>
+              <option>white</option>
+             </select>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
   <main>
