@@ -1,7 +1,7 @@
   //
-  let brightness = cookie('brightness') || '1.00';
-  let fontsize   = cookie('fontsize')   || '15';
-  let lineheight = cookie('lineheight') || '1.25';
+  let brightness = ls('brightness') || '1.00';
+  let fontsize   = ls('fontsize')   || '15';
+  let lineheight = ls('lineheight') || '1.25';
 
 window.onload = () => {
   'use strict';
@@ -21,6 +21,15 @@ window.onload = () => {
   
 }
 
+const ls = ( property, value ) => {
+  if( typeof property !== 'undefined' ){
+    if( typeof value !== 'undefined' ){
+      localStorage.setItem( property, value );
+    }
+    return localStorage.getItem(property);
+  }
+  return null;
+}
 
 let renderHeader = () => {
   
@@ -38,7 +47,7 @@ let renderHeader = () => {
             <input 
               type="range" id="fontsize" name="fontsize" 
               min="10" max="20" step="1" value="${fontsize}" 
-              oninput="cookie('fontsize',this.value); x('html').cssvar('fontsize',this.value+'px')"
+              oninput="ls('fontsize',this.value); x('html').cssvar('fontsize',this.value+'px')"
               >
           </div>
           <div>
@@ -46,7 +55,7 @@ let renderHeader = () => {
             <input 
               type="range" id="lineheight" name="lineheight" 
               min="1" max="2" step="0.05" value="${lineheight}" 
-              oninput="cookie('lineheight',this.value); x('html').cssvar('lineheight',this.value+'em')"
+              oninput="ls('lineheight',this.value); x('html').cssvar('lineheight',this.value+'em')"
               >
           </div>
         </div>
@@ -56,7 +65,7 @@ let renderHeader = () => {
         <div class="subtab hidden" id="colorsettings">
            <div>
             <label for="stylemode">Theme</label>
-            <select id="stylemode" name="stylemode" onchange="x('html').data('stylemode',this.value)">
+            <select id="stylemode" name="stylemode" onchange="ls('stylemode'); x('html').data('stylemode',this.value)">
               <option>dark</option>
               <option>light</option>
               <option>oled</option>
@@ -68,7 +77,7 @@ let renderHeader = () => {
             <input 
               type="range" id="brightness" name="brightness"
               min="0.25" max="1.00" step="0.05" value="${brightness}" 
-              oninput="cookie('brightness',this.value); x('html').cssvar('brightness',this.value)"
+              oninput="ls('brightness',this.value); x('html').cssvar('brightness',this.value)"
               >
           </div>
         </div>
