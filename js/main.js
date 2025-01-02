@@ -16,9 +16,7 @@ window.onload = () => {
   //if( cookie('fontsize'  ) ){ x('html').cssvar(   'fontsize', cookie('fontsize'  ) + 'px' ) }
   //if( cookie('lineheight') ){ x('html').cssvar( 'lineheight', cookie('lineheight') + 'em' ) }
   
-  renderHeader();
-  buildTableOfContents();
-  
+  //
   let brightness = cookie('brightness') || '1.00';
   let fontsize   = cookie('fontsize')   || '15';
   let lineheight = cookie('lineheight') || '1.25';
@@ -27,6 +25,10 @@ window.onload = () => {
   x('html').cssvar( 'brightness', brightness        );
   x('html').cssvar(   'fontsize', fontsize   + 'px' );
   x('html').cssvar( 'lineheight', lineheight + 'em' );
+  
+  //
+  renderHeader();
+  buildTableOfContents();
   
 }
 
