@@ -42,6 +42,12 @@ const x = selector => {
   
   let el = document.querySelector( selector );
   let obj = { el };
+  
+  // CSS Variable
+  obj.cssvar = function( property, value ){
+    this.el.style.setProperty( '--' + property, value );
+    return this;
+  }
 
   // Class
   obj.addClass    = function(name) { this.el.classList.add(name);    return this; };

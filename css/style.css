@@ -5,12 +5,16 @@
   margin: 0; padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  --brightness: 1.00;
+}
 body {
   font-size: 1em;
   line-height: 1.25em;
 }
-
+main > * {
+  opacity: var(--brightness);
+}
 html[data-stylemode="dark"]{
   
 }
@@ -101,8 +105,15 @@ header .right > div {
   
 }
 header .right > div .subtab {
-  background: black;
+  
 }
+
+header .subtab {
+  background: black;
+  position: absolute;
+  left: 0; width: 100%;
+}
+
 
 .hidden {
   display: none!important;
