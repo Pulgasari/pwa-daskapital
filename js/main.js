@@ -1,4 +1,7 @@
-
+  //
+  let brightness = cookie('brightness') || '1.00';
+  let fontsize   = cookie('fontsize')   || '15';
+  let lineheight = cookie('lineheight') || '1.25';
 
 window.onload = () => {
   'use strict';
@@ -16,10 +19,7 @@ window.onload = () => {
   //if( cookie('fontsize'  ) ){ x('html').cssvar(   'fontsize', cookie('fontsize'  ) + 'px' ) }
   //if( cookie('lineheight') ){ x('html').cssvar( 'lineheight', cookie('lineheight') + 'em' ) }
   
-  //
-  let brightness = cookie('brightness') || '1.00';
-  let fontsize   = cookie('fontsize')   || '15';
-  let lineheight = cookie('lineheight') || '1.25';
+
   
   // Apply CSS Variables
   x('html').cssvar( 'brightness', brightness        );
