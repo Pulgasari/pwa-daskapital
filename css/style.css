@@ -21,7 +21,10 @@ html[data-stylemode="light"]{
   --wbmrx-color: #AAA;
 }
 html[data-stylemode="oled"]{
-  
+  --background-color: black;
+  --text-color: white;
+  --wb-color: #FFF9;
+  --wbmrx-color: #FFF9;
 }
 html[data-stylemode="white"]{
   
