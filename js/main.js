@@ -17,6 +17,7 @@ window.onload = () => {
   //if( cookie('lineheight') ){ x('html').cssvar( 'lineheight', cookie('lineheight') + 'em' ) }
   
   renderHeader();
+  buildTableOfContents();
   
   let brightness = cookie('brightness') || '1.00';
   let fontsize   = cookie('fontsize')   || '15';
@@ -30,7 +31,7 @@ window.onload = () => {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
   function buildTableOfContents() {
     const menu = document.getElementById('toc');
     if (!menu) return;
@@ -56,8 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.appendChild(toc);
   }
 
-  buildTableOfContents();
-});
+  
 
 
 
