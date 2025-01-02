@@ -14,7 +14,7 @@ html[stylemode="dark"]{
 html[stylemode="light"]{
   --background-color: #FCF4E1;
   --text-color: #191512;
-  --wb-color: #FFD67C;
+  --wb-color: #5C4D22;
   --wbmrx-color: #FFD67C;
 }
 html[stylemode="oled"]{
