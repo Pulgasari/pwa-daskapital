@@ -50,8 +50,12 @@ const x = selector => {
 
   // Data
   obj.data = function( property, value ) { 
-    this.el.dataset[property] = value;
-    return this;
+    if( typeof value !== 'undefined' ){
+      this.el.dataset[property] = value;
+      return this;
+    } else {
+      return this.el.dataset[property];
+    }
   };
 
   // Log
