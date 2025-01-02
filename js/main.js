@@ -5,11 +5,12 @@ window.onload = () => {
     navigator.serviceWorker.register('./sw.js');
   }
   
-  if( cookie('brightness') ){
-    //x('#brightness').el.value = cookie('brightness');
-    //x('#brightness').value( cookie('brightness') );
-  }
+  [ 'brightness', 'fontsize', 'lineheight' ]
+  .forEach( str => {
+    if( cookie(str) ){  x('html').cssvar( str, cookie(str) ) }
+  });
   
+  renderHeader();
   
 }
 
@@ -76,3 +77,60 @@ const x = selector => {
 
   return obj;
 };
+
+
+function renderHeader(){
+  
+  let brightness = cookie('brightness') || '1.00';
+  
+  let html = `
+    <div class="left">
+      <i class="fa-solid fa-bars" onclick="x('#toc').toggleClass('hidden')"></i>
+      <menu id="toc" class="hidden"></menu>
+    </div>
+    <div class="right">
+      <div>
+        <i class="fa-solid fa-font" onclick="x('#fontsettings').toggleClass('hidden')"></i>
+        <div class="subtab hidden" id="fontsettings">
+          <div>
+            <label for="fontsize">Schriftgröße</label>
+            <input 
+              type="range" id="fontsize" name="fontsize" 
+              min="10" max="20" step="1" value="${fontsize}" 
+              oninput="cookie('fontsize',this.value); x('html').cssvar('fontsize',this.value)"
+            >
+          </div>
+          <div>
+            <label for="lineheight">Zeilenabstand</label>
+            <input 
+              type="range" id="lineheight" name="lineheight" 
+              min="1" max="2" step="0.05" value="${lineheight}" 
+              oninput="cookie('lineheight',this.value); x('html').cssvar('lineheight',this.value)"
+            >
+          </div>
+        </div>
+      </div>
+       <div>
+        <i class="fa-solid fa-palette" onclick="x('#colorsettings').toggleClass('hidden')"></i>
+        <div class="subtab hidden" id="colorsettings">
+           <div>
+            <label for="stylemode">Theme</label>
+            <select id="stylemode" name="stylemode" onchange="x('html').data('stylemode',this.value)">
+              <option>dark</option>
+              <option>light</option>
+              <option>oled</option>
+              <option>white</option>
+            </select>
+          </div>
+          <div>
+            <label for="brightness">Helligkeit</label>
+            <input type="range" id="brightness" name="brightness" min="0.25" max="1.00" step="0.05" value="${brightness}" oninput="cookie('brightness',this.value); x('html').cssvar('brightness',this.value)">
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+  
+  document.querySelector('header').innerHTML = html;
+  
+}
