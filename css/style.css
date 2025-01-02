@@ -33,9 +33,11 @@ body {
 }
 .wb {
   color: var(--wb-color);
+  font-style: "Roboto Slab";
 }
 .wbmrx {
   color: var(--wbmrx-color);
+  font-style: "Roboto Slab";
 }
 
 blockquote, p {
