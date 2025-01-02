@@ -27,28 +27,6 @@
       <menu id="toc" class="hidden"></menu>
     </div>
     <div class="right">
-      <div>
-        <i class="fa-solid fa-font" onclick="x('#fontsettings').toggleClass('hidden')"></i>
-        <div class="subtab hidden" id="fontsettings"></div>
-      </div>
-       <div>
-        <i class="fa-solid fa-palette" onclick="x('#colorsettings').toggleClass('hidden')"></i>
-        <div class="subtab hidden" id="colorsettings">
-           <div>
-            <label for="stylemode">Theme</label>
-            <select id="stylemode" name="stylemode" onchange="x('html').data('stylemode',this.value)">
-              <option>dark</option>
-              <option>light</option>
-              <option>oled</option>
-              <option>white</option>
-            </select>
-          </div>
-          <div>
-            <label for="brightness">Helligkeit</label>
-            <input type="range" id="brightness" name="brightness" min="0.25" max="1.00" step="0.05" oninput="x('html').cssvar('brightness',this.value)">
-          </div>
-        </div>
-      </div>
     </div>
   </header>
   <main>
