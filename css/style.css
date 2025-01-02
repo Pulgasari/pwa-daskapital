@@ -7,3 +7,20 @@
 body {
   --fontsize: 1em;
 }
+
+html[stylemode="dark"]{
+  
+}
+html[stylemode="light"]{
+  --background-color:
+}
+html[stylemode="oled"]{
+  
+}
+html[stylemode="white"]{
+  
+}
+
+body {
+  background-color: var(--background-color);
+}
