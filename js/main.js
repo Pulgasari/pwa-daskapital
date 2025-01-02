@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById('toc');
     if (!menu) return;
 
-    const headlines = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const headlines = document.querySelectorAll('h2, h3, h4, h5, h6');
     const toc = document.createElement('ul');
 
     headlines.forEach(headline => {
