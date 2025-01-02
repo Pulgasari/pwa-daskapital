@@ -86,6 +86,8 @@ const x = selector => {
 function renderHeader(){
   
   let brightness = cookie('brightness') || '1.00';
+  let fontsize   = cookie('fontsize')   || '15';
+  let lineheight = cookie('lineheight') || '1.25';
   
   let html = `
     <div class="left">
