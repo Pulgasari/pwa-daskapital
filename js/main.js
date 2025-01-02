@@ -1,3 +1,13 @@
+const ls = ( property, value ) => {
+  if( typeof property !== 'undefined' ){
+    if( typeof value !== 'undefined' ){
+      localStorage.setItem( property, value );
+    }
+    return localStorage.getItem(property);
+  }
+  return null;
+}
+
   //
   let brightness = ls('brightness') || '1.00';
   let fontsize   = ls('fontsize')   || '15';
@@ -19,16 +29,6 @@ window.onload = () => {
   renderHeader();
   toc({ container: '#toc', selectors: 'h2, h3, h4, h5, h6' });
   
-}
-
-const ls = ( property, value ) => {
-  if( typeof property !== 'undefined' ){
-    if( typeof value !== 'undefined' ){
-      localStorage.setItem( property, value );
-    }
-    return localStorage.getItem(property);
-  }
-  return null;
 }
 
 let renderHeader = () => {
