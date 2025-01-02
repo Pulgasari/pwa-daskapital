@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6,
 blockquote, p {
   margin-top: 10px;
 }
+cite {
+  z-index; 3;
+}
 
 main {
   padding: 10px;
