@@ -24,6 +24,7 @@ window.onload = () => {
   x('html').cssvar( 'brightness', brightness        );
   x('html').cssvar(   'fontsize', fontsize   + 'px' );
   x('html').cssvar( 'lineheight', lineheight + 'em' );
+  x('html').data( 'stylemode', stylemode );
   
   //
   renderHeader();
