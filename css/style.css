@@ -21,14 +21,14 @@ html[data-stylemode="dark"]{
 html[data-stylemode="light"]{
   --background-color: #FCF4E1;
   --text-color: #191512;
-  --wb-color: #AAA;
-  --wbmrx-color: #AAA;
+  --wb-color: #3b0101;
+  --wbmrx-color: #3b0101;
 }
 html[data-stylemode="oled"]{
   --background-color: black;
   --text-color: white;
-  --wb-color: #FFF9;
-  --wbmrx-color: #FFF9;
+  --wb-color: #FF8A8A;
+  --wbmrx-color: #FF8A8A;
 }
 html[data-stylemode="white"]{
   
