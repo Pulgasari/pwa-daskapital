@@ -12,6 +12,7 @@ const ls = ( property, value ) => {
   let brightness = ls('brightness') || '1.00';
   let fontsize   = ls('fontsize')   || '15';
   let lineheight = ls('lineheight') || '1.25';
+  let stylemode  = ls('stylemode')  || 'light';
 
 window.onload = () => {
   'use strict';
