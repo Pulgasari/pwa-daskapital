@@ -65,7 +65,7 @@ let renderHeader = () => {
         <div class="subtab hidden" id="colorsettings">
            <div>
             <label for="stylemode">Theme</label>
-            <select id="stylemode" name="stylemode" onchange="ls('stylemode'); x('html').data('stylemode',this.value)">
+            <select id="stylemode" name="stylemode" onchange="ls('stylemode',this.value); x('html').data('stylemode',this.value)">
               <option>dark</option>
               <option>light</option>
               <option>oled</option>
