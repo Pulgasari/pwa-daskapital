@@ -16,7 +16,10 @@ body {
 }
 
 html[data-stylemode="dark"]{
-  
+  --background-color: #222;
+  --text-color: #CFCFCF;
+  --wb-color: #faacac;
+  --wbmrx-color: #faacac;
 }
 html[data-stylemode="light"]{
   --background-color: #FCF4E1;
@@ -31,7 +34,10 @@ html[data-stylemode="oled"]{
   --wbmrx-color: #faacac;
 }
 html[data-stylemode="white"]{
-  
+  --background-color: white;
+  --text-color: black;
+  --wb-color: #AAA;
+  --wbmrx-color: #AAA;
 }
 
 body {
