@@ -12,9 +12,7 @@ body {
   font-size: 1em;
   line-height: 1.25em;
 }
-main > * {
-  
-}
+
 html[data-stylemode="dark"]{
   
 }
@@ -27,8 +25,8 @@ html[data-stylemode="light"]{
 html[data-stylemode="oled"]{
   --background-color: black;
   --text-color: white;
-  --wb-color: #FF8A8A;
-  --wbmrx-color: #FF8A8A;
+  --wb-color: #faacac;
+  --wbmrx-color: #faacac;
 }
 html[data-stylemode="white"]{
   
@@ -42,15 +40,13 @@ body {
 .wbmrx { color: var(--wbmrx-color); font-family: "Roboto Slab"; }
 
 blockquote, p { hyphens: auto; text-align: justify; }
-cite { display: block; font-size: 0.75em; opacity: 0.5; }
+cite { display: inline-block; font-size: 0.75em; opacity: 0.5; z-index: 3; }
 
 h1, h2, h3, h4, h5, h6,
 blockquote, p {
-  margin-top: 10px;
+  margin-top: 5px;
 }
-cite {
-  z-index: 3;
-}
+
 
 main {
   opacity: var(--brightness);
@@ -76,13 +72,9 @@ header {
   justify-content: space-between;
   z-index: 10;
 }
-header a {
-  color: white;
-  text-decoration: none;
-}
-header a:hover {
-  text-decoration: underline;
-}
+header a       { text-decoration: none; color: white; }
+header a:hover { text-decoration: underline; }
+
 #toc {
   background: #000;
   font-size: 0.85em;
