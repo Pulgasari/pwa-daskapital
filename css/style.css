@@ -47,7 +47,6 @@ blockquote, p {
   margin-top: 5px;
 }
 
-
 main {
   opacity: var(--brightness);
   font-size: var(--fontsize);
@@ -103,12 +102,6 @@ header .right {
   display: flex;
   gap: 10px;
 }
-header .right > div {
-  
-}
-header .right > div .subtab {
-  
-}
 
 header .subtab {
   background: black;
@@ -117,6 +110,4 @@ header .subtab {
 }
 
 
-.hidden {
-  display: none!important;
-}
+.hidden { display: none!important; }
